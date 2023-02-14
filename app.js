@@ -149,7 +149,7 @@ function setLocalStorage() {
         <tr>
             <td>${product.product_id}</td>
             <td>${product.product_name}</td>
-            <td>${product.image_url}</td>
+            <td><img src="${product.image_url}"></td>
             <td>${product.price}</td>
             <td>${product.description}</td>
             <td>
