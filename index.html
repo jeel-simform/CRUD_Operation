@@ -24,6 +24,24 @@
                 </div>
                 <Button onClick="location.replace('./create.html')">Create
                     Product</Button>
+
+                <div class="filterById">
+                    <div>
+                        <label for="filterbyid">Filter By Id:</label>
+                    </div>
+                    <div>
+                        <select name="filterbyid" id="selectId"></select>
+                    </div>
+                </div>
+
+                <div class="filterByName">
+                    <div>
+                      <label for="filterbyname">Filter by Name:</label>
+                    </div>
+                    <div>
+                      <input type="text" name="search" id="search" />
+                    </div>
+                  </div>
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">
@@ -32,10 +50,10 @@
                                     table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Product Id</th>
-                                            <th>Product Name</th>
+                                            <th id="p_id">Product Id</th>
+                                            <th id="p_name">Product Name</th>
                                             <th>Image</th>
-                                            <th>Price</th>
+                                            <th id="p_price">Price</th>
                                             <th>Description</th>
                                         </tr>
                                     </thead>
