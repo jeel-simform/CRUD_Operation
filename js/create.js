@@ -17,7 +17,7 @@ submitBtn.addEventListener("click", (e) => {
       alert("enter something");
     } else if (
       product_name.length > 0 &&
-      image_url.length > 0 &&
+      isValidUrl(image_url) &&
       price > 0 &&
       description.length >0
     ) {
@@ -41,3 +41,12 @@ submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     window.location = "../index.html";
 })
+
+function isValidUrl(string) {
+  try {
+    new URL(string);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
