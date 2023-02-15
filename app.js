@@ -116,12 +116,12 @@ function rendertable(temp_products) {
       <tr>
           <td>${product.product_id}</td>
           <td>${product.product_name}</td>
-          <td>${product.image_url}</td>
+          <td><img src="${product.image_url}"></td>
           <td>${product.price}</td>
           <td>${product.description}</td>
           <td>
               <button class="btn btn-sm btn-success" onClick="onEdit(${product.product_id})">
-                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-edit text-success"></i>
               </button>
           </td>
           <td>

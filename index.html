@@ -15,7 +15,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
             />
-            
+
     </head>
     <body class="body">
         <div class="container mt-4">
@@ -25,26 +25,29 @@
                         CRUD Practice With Javascript and Localstorage
                     </h1>
                 </div>
-                <Button onClick="location.replace('./create.html')">Create
+                <Button onClick="location.replace('./create.html')"
+                    id="create_btn">Create
                     Product</Button>
-
-                <div class="filterById">
-                    <div>
-                        <label for="filterbyid">Filter By Id:</label>
+                <div class="filter">
+                    <div class="filterById">
+                        <div>
+                            <label for="filterbyid">Filter By Id:</label>
+                        </div>
+                        <div>
+                            <select name="filterbyid" id="selectId"></select>
+                        </div>
                     </div>
-                    <div>
-                        <select name="filterbyid" id="selectId"></select>
+    
+                    <div class="filterByName">
+                        <div>
+                            <label for="filterbyname">Filter by Name:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="search" id="search" />
+                        </div>
                     </div>
                 </div>
-
-                <div class="filterByName">
-                    <div>
-                      <label for="filterbyname">Filter by Name:</label>
-                    </div>
-                    <div>
-                      <input type="text" name="search" id="search" />
-                    </div>
-                  </div>
+                
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">

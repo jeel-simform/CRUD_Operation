@@ -12,6 +12,6 @@ backBtn.addEventListener('click',(e)=>{
     window.location = "./index.html";
 })
   document.querySelector('#product_name').value=p.product_name;
-  document.querySelector('#image_url').value=p.image_url;
+  document.querySelector('#image_url').src=p.image_url;
   document.querySelector('#price').value=p.price;
   document.querySelector('#description').value=p.description;
