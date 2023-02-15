@@ -96,7 +96,7 @@ function rendertable(temp_products) {
           <td>${product.product_id}</td>
           <td>${product.product_name}</td>
           <td><img src="${product.image_url}"></td>
-          <td>${product.price}</td>
+          <td>₹${product.price}</td>
           <td>${product.description}</td>
           <td>
           <td>
@@ -129,7 +129,7 @@ function setLocalStorage() {
             <td>${product.product_id}</td>
             <td>${product.product_name}</td>
             <td><img src="${product.image_url}"></td>
-            <td>${product.price}</td>
+            <td>₹${product.price}</td>
             <td>${product.description}</td>
             <td>
               <td>
