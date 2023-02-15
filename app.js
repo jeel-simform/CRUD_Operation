@@ -121,7 +121,7 @@ function rendertable(temp_products) {
           <td>${product.description}</td>
           <td>
               <button class="btn btn-sm btn-success" onClick="onEdit(${product.product_id})">
-                  <i class="fa fa-edit text-success"></i>
+                  <i class="fa fa-edit></i>
               </button>
           </td>
           <td>
