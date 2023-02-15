@@ -35,8 +35,10 @@ img{
     /* justify-content:center; */
 }
 .filter .filterById select{
-    color: white;
-    border:  1px solid white;
+    color: rgb(65, 65, 65);
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(223, 223, 223);;
     margin-top:7px;
     margin-bottom: 33px;    
     width: 155px;
@@ -52,8 +54,11 @@ img{
 }
 
 .filter .filterByName input{
-    color: white;
-    border:  1px solid white;
+    color: rgb(65, 65, 65);
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(223, 223, 223);;
+    /* border:  1px solid white; */
     margin-top:7px;
     margin-bottom: 33px;    
     width:240px;

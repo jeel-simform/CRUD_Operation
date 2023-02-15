@@ -7,7 +7,6 @@ let p=products.find(({product_id}) =>product_id==id);
 
 
 editBtn.addEventListener('click',(e)=>{
-    // alert('edit event')
     e.preventDefault();
     p.product_name=document.querySelector('#product_name').value;
     p.price=document.querySelector('#price').value;
@@ -16,14 +15,13 @@ editBtn.addEventListener('click',(e)=>{
 
     window.localStorage.setItem('productData',JSON.stringify(products));
     window.localStorage.removeItem('product_id')
-    window.location.replace('./index.html')
+    window.location.replace('../index.html')
 })
 
 cancelBtn.addEventListener('click',(e)=>{
     e.preventDefault();
-    // alert('calcel event')
     window.localStorage.removeItem('product_id')
-    window.location = "./index.html";
+    window.location = "../index.html";
 })
   document.querySelector('#product_name').value=p.product_name;
   document.querySelector('#image_url').value=p.image_url;
