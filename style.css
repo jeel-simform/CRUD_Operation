@@ -140,6 +140,9 @@ img{
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+#p_id, #p_name,#p_price:hover{
+    cursor: pointer;
+}
 .backBtn{
     color: rgb(225, 222, 222);
     background-color: rgb(19, 137, 240);

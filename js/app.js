@@ -13,7 +13,7 @@ function renderOptions() {
   let products = JSON.parse(localStorage.getItem("productData"));
   document.querySelector("#selectId").innerHTML =
     '<option value="all">All</option>';
-  const arr = products.map((product) => product.product_id);
+  const arr = products.map((product) => product.productId);
   arr.forEach((Id) => {
     document
       .querySelector("#selectId")
@@ -29,7 +29,7 @@ selectId.addEventListener("change", () => {
     rendertable(products);
   } else {
     let tempproduct = [...products].filter(
-      (product) => product.product_id === Number(selectId.value)
+      (product) => product.productId === Number(selectId.value)
     );
     rendertable(tempproduct);
   }
@@ -38,7 +38,7 @@ selectId.addEventListener("change", () => {
 search.addEventListener("keyup", () => {
   let products = JSON.parse(localStorage.getItem("productData"));
   let tempproduct = [...products].filter((product) =>
-    product.product_name.toLowerCase().includes(search.value.toLowerCase())
+    product.productName.toLowerCase().includes(search.value.toLowerCase())
   );
   rendertable(tempproduct);
 });
@@ -48,9 +48,9 @@ p_id.addEventListener("click", (e) => {
   let products = JSON.parse(localStorage.getItem("productData"));
   let temp_products;
   if (p_id_asc) {
-    temp_products = [...products].sort((a, b) => a.product_id - b.product_id);
+    temp_products = [...products].sort((a, b) => a.productId - b.productId);
   } else {
-    temp_products = [...products].sort((a, b) => b.product_id - a.product_id);
+    temp_products = [...products].sort((a, b) => b.productId - a.productId);
   }
   p_id_asc = !p_id_asc;
   rendertable(temp_products);
@@ -62,11 +62,11 @@ p_name.addEventListener("click", (e) => {
   let temp_products;
   if (p_name_asc) {
     temp_products = [...products].sort((a, b) =>
-      b.product_name.localeCompare(a.product_name)
+      b.productName.localeCompare(a.productName)
     );
   } else {
     temp_products = [...products].sort((a, b) =>
-      a.product_name.localeCompare(b.product_name)
+      a.productName.localeCompare(b.productName)
     );
   }
   p_name_asc = !p_name_asc;
@@ -93,25 +93,25 @@ function rendertable(temp_products) {
   temp_products.forEach((product) => {
     table.innerHTML += `
       <tr>
-          <td>${product.product_id}</td>
-          <td>${product.product_name}</td>
-          <td><img src="${product.image_url}"></td>
+          <td>${product.productId}</td>
+          <td>${product.productName}</td>
+          <td><img src="${product.imageUrl}"></td>
           <td>₹${product.price}</td>
           <td>${product.description}</td>
           <td>
           <td>
-            <button class="btn btn-sm btn-success" onClick="onEdit(${product.product_id})">
+            <button class="btn btn-sm btn-success" onClick="onEdit(${product.productId})">
             <i class="fa fa-edit"></i>
             </button>
           </td>
           <td>
-            <button class="btn btn-sm btn-danger delete" onClick="onDelete(${product.product_id})")>
+            <button class="btn btn-sm btn-danger delete" onClick="onDelete(${product.productId})")>
             <i class="fa fa-trash"></i>
             </button>
           </td>
 
           <td>
-            <button class="btn btn-sm btn-primary" onClick="onView(${product.product_id})" >
+            <button class="btn btn-sm btn-primary" onClick="onView(${product.productId})" >
             <i class="fa fa-eye"></i>
             </button>
           </td>
@@ -126,25 +126,25 @@ function setLocalStorage() {
   arr.forEach((product) => {
     table.innerHTML += `
         <tr>
-            <td>${product.product_id}</td>
-            <td>${product.product_name}</td>
-            <td><img src="${product.image_url}"></td>
+            <td>${product.productId}</td>
+            <td>${product.productName}</td>
+            <td><img src="${product.imageUrl}"></td>
             <td>₹${product.price}</td>
             <td>${product.description}</td>
             <td>
               <td>
-                <button class="btn btn-sm btn-success" onClick="onEdit(${product.product_id})">
+                <button class="btn btn-sm btn-success" onClick="onEdit(${product.productId})">
                 <i class="fa fa-edit"></i>
                 </button>
               </td>
               <td>
-                <button class="btn btn-sm btn-danger delete" onClick="onDelete(${product.product_id})")>
+                <button class="btn btn-sm btn-danger delete" onClick="onDelete(${product.productId})")>
                 <i class="fa fa-trash"></i>
                 </button>
               </td>
 
               <td>
-                <button class="btn btn-sm btn-primary" onClick="onView(${product.product_id})" >
+                <button class="btn btn-sm btn-primary" onClick="onView(${product.productId})" >
                 <i class="fa fa-eye"></i>
                 </button>
               </td>
@@ -166,18 +166,18 @@ function onDelete(id) {
   } else {
     let arr = JSON.parse(localStorage.getItem("productData"));
 
-    arr = arr.filter((product) => product.product_id != id);
+    arr = arr.filter((product) => product.productId != id);
 
     localStorage.setItem("productData", JSON.stringify(arr));
     setLocalStorage();
   }
 }
 function onEdit(id) {
-  localStorage.setItem("product_id", JSON.stringify(id));
+  localStorage.setItem("productId", JSON.stringify(id));
   location.replace("../pages/edit.html");
 }
 
 function onView(id) {
-  localStorage.setItem("product_id", JSON.stringify(id));
+  localStorage.setItem("productId", JSON.stringify(id));
   location.replace("../pages/view.html");
 }

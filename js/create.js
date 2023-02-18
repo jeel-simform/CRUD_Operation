@@ -2,29 +2,29 @@
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let arr = JSON.parse(localStorage.getItem("productData")) || [];
-    let product_name = document.querySelector("#product_name").value;
-    let image_url = document.querySelector("#image_url").value;
+    let productName = document.querySelector("#productName").value;
+    let imageUrl = document.querySelector("#imageUrl").value;
     let price = document.querySelector("#price").value;
     let description = document.querySelector("#description").value;
-    let product_id =Date.now();   ;
+    let productId =Date.now();   ;
     
     if (
-      product_name.length <= 0 &&
-      image_url.length <= 0 &&
+      productName.length <= 0 &&
+      imageUrl.length <= 0 &&
       price < 0 &&
       description.length <= 0
     ) {
       alert("enter something");
     } else if (
-      product_name.length > 0 &&
-      isValidUrl(image_url) &&
+      productName.length > 0 &&
+      isValidUrl(imageUrl) &&
       price > 0 &&
       description.length >0
     ) {
       let arrData = {
-        product_id,
-        product_name,
-        image_url,
+        productId,
+        productName,
+        imageUrl,
         price,
         description,
       };

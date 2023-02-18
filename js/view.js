@@ -1,16 +1,16 @@
 
 const backBtn=document.querySelector("#backBtn");
 
-let id=localStorage.getItem("product_id");
+let id=localStorage.getItem("productId");
 let products=JSON.parse(localStorage.getItem('productData'));
-let p=products.find(({product_id}) =>product_id==id);
+let p=products.find(({productId}) =>productId==id);
 
 backBtn.addEventListener('click',(e)=>{
     e.preventDefault();
-    window.localStorage.removeItem('product_id')
+    window.localStorage.removeItem('productId')
     window.location = "../index.html";
 })
-  document.querySelector('#product_name').value=p.product_name;
-  document.querySelector('#image_url').src=p.image_url;
+  document.querySelector('#productName').value=p.productName;
+  document.querySelector('#imageUrl').src=p.imageUrl;
   document.querySelector('#price').value=p.price;
   document.querySelector('#description').value=p.description;
