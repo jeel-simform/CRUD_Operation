@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="body">
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <form id="edit_form">
+                    <input type="hidden" name="productId"
+                        id="productId" disabled>
+                <label for="">Image</label>
+                <img src="" alt="" id="imageUrl" class="for-contro" >
+                <br>
+                    <label for="">Product Name</label>
+                    <input type="text" placeholder="Product Name"
+                        class="form-control" name="productName"
+                        id="productName" required disabled> 
+                    <br>
+                    <br>
+                    <label for="">Price</label>
+                    <input type="number" placeholder="Price"
+                        class="form-control" id="price" name="price"
+                        required disabled>
+                    <br>
+                    <label for="">Description</label>
+                    <input type="text" placeholder="Description"
+                        class="form-control" name="description"
+                        id="description" required disabled>
+                    <Button id="backBtn" class="backBtn">Back</Button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/view.js"></script>
+</body>
+</html>
+</body>
+</html>

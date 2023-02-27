@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="Description" content="Enter your description here" />
+        <link rel="stylesheet" href="style.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+            />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            />
+            <title>CRUD operation</title>
+
+    </head>
+    <body class="body">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="alert alert-primary text-center">
+                        CRUD Operation With Javascript and Localstorage
+                    </h1>
+                </div>
+                <Button onClick="location.replace('../pages/create.html')"
+                    id="create_btn">Create
+                    Product</Button>
+                <div class="filter">
+                    <div class="filterById">
+                        <div>
+                            <label for="filterbyid">Filter By Id:</label>
+                        </div>
+                        <div>
+                            <select name="filterbyid" id="selectId"></select>
+                        </div>
+                    </div>
+    
+                    <div class="filterByName">
+                        <div>
+                            <label for="filterbyname">Filter by Name:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="search" id="search" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="datatable" class="table
+                                    table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th id="p_id">Product Id</th>
+                                            <th id="p_name">Product Name</th>
+                                            <th>Image</th>
+                                            <th id="p_price">Price</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/app.js">
+        
+    </script>
+    </body>
+</html>
